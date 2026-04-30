@@ -21,3 +21,32 @@ public:
     }
 
     
+    void addNode()
+    {
+        int nim;
+        cout << "\nEnter the roll number of the student: ";
+        cin >> nim;
+
+        Node *nodeBaru = new Node;
+
+        nodeBaru->noMhs = nim;
+
+        if (START == NULL || nim <= START->noMhs)
+        {
+            if (START != NULL && nim == START->noMhs)
+            {
+                cout << "Duplicate roll numbers not allowed" << endl;
+                return;
+            }
+
+            nodeBaru->next = START;
+
+            if (START != NULL)
+                START->prev = nodeBaru;
+
+            nodeBaru->prev = NULL;
+            START = nodeBaru;
+            return;
+        }
+
+        
