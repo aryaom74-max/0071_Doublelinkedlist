@@ -215,4 +215,8 @@ int main()
             break;
         case '6':
             return 0;
+        default:
+            cout << "Invalid option\n";
+        }
+
         
