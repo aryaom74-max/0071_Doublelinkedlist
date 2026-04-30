@@ -219,4 +219,11 @@ int main()
             cout << "Invalid option\n";
         }
 
-        
+        cout << "\nPress enter to continue...";
+        cin.ignore();
+        cin.get();
+
+    } while (choice != '6');
+
+    return 0;
+}
